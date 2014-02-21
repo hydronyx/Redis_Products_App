@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RedisTwo</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+ <!--The Header Wrapper Starts -->
+
+ <div class="headerWrapper">      
+  <div class = "container clearfix"> 
+    <h1>Sample Products</h1> 
+  </div> 
+
+
+
+</div> 
+<!--The Header Wrapper Ends -->
+
+
+
+
+<!--The Content Wrapper Starts -->
+<div class ="contentWrapper">
+  <div class="container">    
+    <div class="row">
+      <div class="offset1 span10 ulEdit">
+
+        <%= yield %>
+
+      </div> 
+    </div>      
+  </div>
+</div>
+<!-- Content Wrapper ends here -->
+
+
+
+<!--footer Wrapper starts -->
+<div class="footerWrapper">
+  <div class = "container"> 
+    <div class="row">
+      <div class= "span2 offset5 copyright">&copy; Redis App</div>
+    </div> 
+  </div> 
+</div>
+
+
+<!-- footer wrapper ends --> 
+
+</body>
+</html>
