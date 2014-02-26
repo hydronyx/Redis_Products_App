@@ -1,8 +1,11 @@
- <div class=" span12">
+<h1>Products#edit</h1>
+<p>Find me in app/views/products/edit.html.erb</p>
 
-  <%= form_tag("/products", method: "post") do %>
-  <%= label_tag(:name, "Product Name :") %>
-  <%= text_field_tag(:name) %>
+<div class=" span12">
+
+  <%= form_tag("/products/#{params[:id]}", method: "put") do %>
+  <h3> Edit product :  <%="#{params[:id]}"%>  </h3> 
+
   <%= label_tag(:price, "Price:") %>
   <%= text_field_tag(:price) %>
   <%= label_tag(:author, "Author:") %>
@@ -16,3 +19,4 @@
   <%= link_to "====== Back to Homepage ======" , {:action => "index", :controller => "products"} %>
 
 </div>
+

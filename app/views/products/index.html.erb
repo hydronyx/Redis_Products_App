@@ -1,27 +1,16 @@
-<!DOCTYPE html>
+  <h2> Add New Product ? </h2>
 
-
-<head>
-  <meta charset="utf-8">
-  <title>Product | Home</title>
-  <link href="http://getbootstrap.com/2.3.2/assets/css/bootstrap.css" rel="stylesheet" /> 
-  <link href='http://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
-
-</head> 
-
-<body> 
-  <h2>The Product details are : </h2>
-  <%=`echo #{@product_details} > /dev/pts/1`%>
+  <%= link_to "Click here to Add New Product" , {:action => "new", :controller => "products"} %>
   <br><br>
-  <div>The Product name is :<strong> <%=@product_name%> </strong> </div>
-  <br>
-  <div> Product Details are : <%@product_details%> </div>
-  <br>
-  <% @product_details.each do |item| %>
+
+  <h2>The Available Products are: </h2>
+  <% @product_name.each do |item| %>
   <ul>
-    <li><%= item %></li>
+    <li>
+      <a href="/products/<%=item%>"><%= item %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+      <%= link_to '..Edit..', edit_product_path(item) %>
+      
+      <%= link_to "..Delete..", product_path(item), :confirm => "Are you sure?", :method => :delete %>
+    </li>
   </ul>
   <% end %>
-
-</body>
-</html>

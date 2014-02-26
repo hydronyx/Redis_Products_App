@@ -1,2 +1,10 @@
-<h1>Products#destroy</h1>
-<p>Find me in app/views/products/destroy.html.erb</p>
+  <h1>Products#destroy</h1>
+  <br>
+  <h2>The Product deleted successfully ! </h2>
+  <br><br>
+  <div>The Product deleted was:<strong> <%=params[:id]%> </strong> </div>
+  <br>
+  
+ 
+
+<%= link_to "====== Back to Homepage ======" , {:action => "index", :controller => "products"} %>

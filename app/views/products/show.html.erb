@@ -1,2 +1,15 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+
+  <h2>The Product details are : </h2>
+  <br><br>
+  <div>The Product name is :<strong> <%=params[:id]%> </strong> </div>
+  <br>
+  <div> Product Details are : <%@product_details%> </div>
+  <br>
+  <% @product_details.each do |item| %>
+  <ul>
+    <li><%= item %></li>
+  </ul>
+  <% end %>
+  <br><br>
+
+<%= link_to "====== Back to Homepage ======" , {:action => "index", :controller => "products"} %>
